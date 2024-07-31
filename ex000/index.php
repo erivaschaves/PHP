@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>
-        <?php
+        <?
             echo "Olá Mundo!! \u{1F30E}";
         ?>
 
