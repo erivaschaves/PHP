@@ -15,11 +15,26 @@
         // $v= 45;
         // var_dump($v);
 
-        $num = (integer) 3e2; // 3 x 10(2) coerção
-        //echo "O valor é $num";
-        var_dump($num);
+        // $num = (integer) 3e2; // 3 x 10(2) coerção
+        // //echo "O valor é $num";
+        // var_dump($num);
 
+        // $num = (int) "950";
+        // var_dump($num);
 
+        // $casado = true;
+        // //var_dump($casado);
+        // print "O valor é $casado";
+
+        // $vet = [6, 2.5, "Maria", 3, false];
+        // var_dump($vet);
+
+        class Pessoa {
+            private string $nome;
+        }
+
+        $p = new Pessoa;
+        var_dump($p);
 
     ?>
     
