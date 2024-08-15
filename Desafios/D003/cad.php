@@ -12,12 +12,16 @@
         <p>
             <?php
               // Pegando numero através do "name" do input.
-              $real = 1000;
+              $real = 850.50;
               $cotação = 5.17;
               $dolar = $real/$cotação;
               //$s = $num + 1;
               //$numero = $_GET["numero"] ?? "sem numero"; // caso não haja numero.
-              echo "<p>Seus R\$" .number_format($real, 2, "," , ".")." equivalem a US\$".number_format($dolar, 2, "," , "."); 
+              // Formatando usando number format.
+              //echo "<p>Seus R\$" .number_format($real, 2, "," , ".")." equivalem a US\$".number_format($dolar, 2, "," , ".");
+              // Formatação de moedas com internacionalização
+	          $padrão = numfmt_create("pt_BR", NumberFormatter:: CURRENCY);
+	          echo "<p>Seus " .numfmt_format_currency($padrão,$real, "BRL")." equivalem a<strong> " .numfmt_format_currency($padrão,$dolar,"BRL")."</strong><p>";
             ?>
         </p>
         <!--Link para retornar a página anterior-->
