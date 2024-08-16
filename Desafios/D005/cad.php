@@ -12,16 +12,18 @@
         <p>
             <?php
               // Pegando numero através do "name" do input.
-              $num = 9327.832;
+              $num = 1256.123;
+              // Convertendo o número para inteiro
               $inteiro = (integer) $num;
               $real = $num - $inteiro;
-              //$numero = $_GET["numero"] ?? "sem numero"; // caso não haja numero.
-	         echo "Analisando o número <strong>$num</strong> informado pelo usuário:<br>";
+              //usando o metodo $_GET , $_POST ou $_REQUEST
+              //$numero = $_GET["numero"] ?? 0; // caso não haja numero.
+	         echo "Analisando o número <strong>".number_format($num, 3,",", ".")."</strong> informado pelo usuário:<br>";
              //Criando lista simples não ordenada
              echo
              "<ul>
-                <li>A parte inteira do número é <strong>$inteiro</strong></li>
-                <li>A parte fracionária do número é <strong>$real</strong></li> 
+                <li>A parte inteira do número é <strong>".number_format($inteiro, 0,",", ".")."</strong></li>
+                <li>A parte fracionária do número é <strong>".number_format($real, 3,",", ".")."</strong></li> 
              </ul>";
             ?>
         </p>
