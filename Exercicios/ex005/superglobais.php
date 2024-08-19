@@ -12,7 +12,7 @@
             <?php
                 // Defininindo cookie 1h como 3600 segundos
                 setcookie("dia-da-semana", "SEGUNDA", time() + 3600);
-                // Defininfo método SESSION
+                // Definindo método SESSION
                 session_start();
                 $_SESSION["teste"] = "FUNCIONOU";
                 
@@ -32,6 +32,15 @@
                 var_dump($_SESSION);
 
                 echo "<h1>Superglobal ENV</h1>";
+                var_dump($_ENV);
+                //foreach (getenv() as $c => $v) {
+                   // echo "<br>$c - $v";
+                //}
+                echo "<h1>Superglobal SERVER</h1>";
+                var_dump($_SERVER);
+
+                echo "<h1>Superglobal GLOBALS</h1>";
+                var_dump($GLOBALS);
             ?>
         </pre>
 
