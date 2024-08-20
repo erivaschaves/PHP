@@ -15,7 +15,7 @@
     ?>
     <main>
         <h1>Somador de Valores</h1>
-        <!--Criando formulário retroalimentados-->
+        <!--Criando formulário retroalimentado-->
         <form action="<?= $_SERVER['PHP_SELF']?>" method="get">
             <label for="v1">Valor 1</label>
             <input type="number" name="v1" id="v1" value="<?=$valor1?>">
