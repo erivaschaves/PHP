@@ -35,7 +35,6 @@
             //Imprimindo o resultado na tela
             print "<p>Quem recebe uma salário de R\$".number_format($valor, 2, "," , ".")." ganha <strong>$qtd salários mínimos</strong> + R\$".number_format($dif, 2, "," , ".")."</p>"; 
         ?>        
-    </section>
-    
+    </section>   
 </body>
 </html>
