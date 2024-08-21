@@ -14,6 +14,7 @@
     ?>
 <main>
     <h1>Anatomia de uma Divisão</h1>
+    <!--Criando formulário PHP_SELF-->
     <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
         <label for="v1">Dividendo</label>
         <input type="number" name="v1" id="v1" value="<?=$valor1?>">
@@ -24,14 +25,24 @@
     </form>
 </main>
 
-<section id="estrutura">
+<section>
     <h2>Estrututa da Divisão</h2>
+    <!--Criando divisão inteira com a função intdiv e resto da divisão-->
     <?php 
         $divisao = intdiv($valor1, $valor2);
-        print "<p>A Divisão entre os valores $valor1 e $valor2 é <strong>$divisao</strong></p>"; 
+        $resto = $valor1 % $valor2;
     ?>
-</section>
-
-    
+    <!--criando tabela da divisão-->
+    <table class="divisao">
+            <tr>
+                <td><?=$valor1?></td>
+                <td><?=$divisao?></td>
+            </tr>
+            <tr>
+                <td><?=$resto?></td>
+                <td><?=$valor2?></td>
+            </tr>    
+    </table>
+</section> 
 </body>
 </html>
