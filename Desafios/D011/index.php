@@ -20,15 +20,14 @@
             <input type="number" name="v1" id="v1">
             <label for="num">Qual será o percentual de reajuste?(<output id="ival">0</output>%)</label>
             <input type="range" name="num" id="num" min = "0" max = "100" value="0" oninput="ival.innerHTML = Number(num.value)">
+            <input type="submit" value="Reajustar">
         </form>       
     </main>
     <section>
         <h2>Resultado do Reajuste</h2>
         <?php
-            echo "O pruduto custava <strong>R\$".number_format($valor, 2, ",", ".").", com $aumento% de aumento</strong> vai passar a custar <strong>R\$".number_format($reajuste, 2, "," , ".")."</strong> a partir de agora."; 
+            echo "O pruduto que custava R\$".number_format($valor, 2, ",", ".").", com<strong> $aumento% de aumento</strong> vai passar a custar <strong>R\$".number_format($reajuste, 2, "," , ".")."</strong> a partir de agora."; 
         ?>
-    </section>
-
-    
+    </section>  
 </body>
 </html>
