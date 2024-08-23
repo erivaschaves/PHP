@@ -7,12 +7,14 @@
     <!--Carregando arquivo de estilo css --->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body>  
     <?php
+    //Pegando valores dos inputs e calculando porcentagem de aumento
         $valor = $_GET['v1'] ?? 0;
         $aumento = $_GET['num'] ?? 0;
         $reajuste = $valor * (1 + ($aumento/100));
     ?>
+    <!--Criando formulário SERVER PHP_SELF e inputs-->
     <main>
         <h1>Reajustador de Preços</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
@@ -24,6 +26,7 @@
         </form>       
     </main>
     <section>
+        <!--Imprimindo Resultado--> 
         <h2>Resultado do Reajuste</h2>
         <?php
             echo "O pruduto que custava R\$".number_format($valor, 2, ",", ".").", com<strong> $aumento% de aumento</strong> vai passar a custar <strong>R\$".number_format($reajuste, 2, "," , ".")."</strong> a partir de agora."; 
