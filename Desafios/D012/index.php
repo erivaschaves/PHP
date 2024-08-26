@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Tempo</title>
-    <link rel="stylesheet" href="style.css">
+    <!--Carregando arquivo de estilo css-->
+    <link rel="stylesheet" href="style.css">    
 </head>
 <body>
     <?php
+    //Pegando input com valor de segundos para cálculo de tempo
         $segundos = $_GET['num'] ?? 0;
         $minutos =(integer)($segundos / 60);
         $horas = (integer)($minutos / 60);
@@ -30,6 +32,7 @@
 
     <section>
         <h2>Totalizando Tudo</h2>
+        <!--Imprimindo Resultado-->
         <?php
             echo "Analisando o valor que você digitou, <strong>".number_format($segundos, 0, "." , "." )." segundos</strong> equivalem a um total de:
             <ul>
