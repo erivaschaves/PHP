@@ -10,7 +10,7 @@
 <body>
     <!--Definindo valores e raizes-->
     <?php
-        $num = $_GET['num'] ?? 0;
+        $num = $_GET['num'] ?? 1;
         $raizq = sqrt($num);
         $raizc =  $num ** (1/3);
     ?>
@@ -19,14 +19,14 @@
         <!--Criando formulário e inputs-->
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             <label for="num">Número</label>
-            <input type="number" name="num" id="num">
+            <input type="number" name="num" id="num" value="<?=$num?>">
             <input type="submit" value="Calcular Raizes">
         </form>
     </main>
     <section>
         <h2>Resultado Final</h2>
         <?php
-            print "Analisando <strong>número $num</strong>, temos:"; 
+            echo "Analisando <strong>número $num</strong>, temos:"; 
         ?>
         <!--Criando lista de raizes-->
         <ul>
