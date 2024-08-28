@@ -10,7 +10,7 @@
 <body>
     <?php
     //Pegando valores dos inputs e ano atual com função date 
-        $nascimento=$_GET['nasc']?? 2000;
+        $nascimento=$_GET['nasc']?? '2000';
         $anoAtual = date('Y');
         $ano = $_GET['ano'] ?? $anoAtual;
         $idade = $ano - $nascimento; 
@@ -20,9 +20,9 @@
         <!--Criando formulário SERVER PHP_SELF e inputs-->
         <form action="<?=$_SERVER["PHP_SELF"]?>" method="get">
             <label for="nasc">Em que ano você nasceu?</label>
-            <input type="number" name="nasc" id="nasc">
-            <label for="ano">Quer saber sua idade em que ano ?(atualmente estamos em <?="<strong>$anoAtual</strong>"?>)</label>
-            <input type="number" name="ano" id="ano">
+            <input type="number" name="nasc" id="nasc" min="1900" max = "<?=($anoAtual-1)?>" value="<?=$nascimento?>">
+            <label for="ano">Quer saber sua idade em que ano ?(atualmente estamos em <strong><?=$anoAtual?></strong>)</label>
+            <input type="number" name="ano" id="ano" min="1900" value="<?=$ano?>">
             <input type="submit" value="Qual será a minha idade?">
         </form>
     </main>
@@ -30,9 +30,7 @@
     <section>
         <!--Imprimindo Resultados--> 
         <h2>Resultado</h2>
-        <?php
-            print "Quem nasceu em $nascimento vai ter <strong>$idade anos</strong> em $ano!"; 
-        ?>
+        <p>Quem nasceu em <?=$nascimento?> vai ter <strong><?=$idade?> anos</strong> em <?=$ano?>!</p>
     </section>
     
 </body>
