@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-        $valor = $_GET['num'];
+        $valor = $_GET['num']?? '0';
         $cem = 0;
         $cinq = 0; 
         $dez = 0; 
@@ -35,7 +35,7 @@
         <h1>Caixa Eletrônico</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             <label for="num">Qual Valor você deseja sacar?(R$)*</label>
-            <input type="number" name="num" id="num">
+            <input type="number" name="num" id="num" min="0" value="<?=$valor?>">
             <p>*Notas disponiveis: R$100, R$50, R$10 e R$5</p>
             <input type="submit" value="Sacar">
         </form>
@@ -50,7 +50,6 @@
             <li><img src="imagens/10-reais.jpg" alt="nota de 10"> x<?=$dez?></li><br>
             <li><img src="imagens/5-reais.jpg" alt="nota de 5"> x<?=$cinco?></li>
         </ul>            
-    </section>
-    
+    </section> 
 </body>
 </html>
