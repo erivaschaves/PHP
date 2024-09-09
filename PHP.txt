@@ -1,0 +1,366 @@
+Segura o alt e e vai clicando para selecioar varios elementos de uma vez
+apache , Mysql e PHP
+
+Solução Linux: LAMP
+
+Solução Windows: WAMP
+
+Solução Mac: MAMP
+
+Solução geral: XAMPP
+
+XAMPP server
+
+WAMP server 
+
+Alternative.net
+
+PHP sandbox : PHP online
+
+w3schools.com
+
+(Mostrando a versão do PHP)
+
+$v = phpversion();
+print "Você está rodando a versão $v do PHP \u{1faf6}";
+
+pagina do XAMPP para testar o apache : http://127.0.0.1/dashboard/ ou http://localhost/dashboard/
+
+Extensões necessárias no vs code 
+
+PHP Awesome Snippets
+
+Format HTML in PHP
+
+PHP Intelephense
+
+
+(Escrevendo mensagem na tela)
+<?php
+    echo "Olá Mundo!!";
+?>
+
+<?php
+    print "Olá Mundo!!";
+ ?>
+
+Emojipédia(site para emojis)
+
+(Escrevendo mensagem com o emoji do globo)
+<?php
+    echo "Olá Mundo!! \u{1F30E}";
+ ?>
+
+(Dados do Servidor PHP) 
+<?php
+    phpinfo();
+?>
+
+Delimitações de php
+
+<?php ?> (super tag PHP)
+<?  ?> (short open tag)
+<%  %> (ASP tag)
+<?=  ?> (short tag PHP)
+
+
+(Mostrando dia e hora em PHP)
+date_default_timezone_set("America/Sao_Paulo"); //GMT-03 (Formato do Brasil, do contrário ficará do servidor)
+        echo "Hojé é dia " . date("d/M/Y");
+        echo " e a hora é " . date("G:i:s T");
+
+Configurar arquivo php.ini na pasta php do servidor xampp caso short tag não funcione e reiniciar o apache
+
+(usando Short open tag)
+
+<?
+        date_default_timezone_set("America/Sao_Paulo"); //GMT-03
+        echo "Hojé é dia " . date("d/M/Y");
+        echo " e a hora é " . date("G:i:s T");
+    ?>
+(Variáveis podem ser atribuídos novos valores, constantes são fixas) 
+$nome = "Erivaldo";
+$sobrenome = "Chaves";
+$nome = "josé" (CERTO!)
+
+$resto = $resto % 100 é igual a $resto %= 100
+	
+const PAIS = "Brasil"
+const PAIS = "EUA" (ERRADO!)
+
+Regras para nomes identificadores
+
+1 - Variáveis sempre começam com o símbolo $
+
+2 - O segundo pode ser letra ou o símbolo_
+
+3 - Aceita caracteres [a-z], [A-Z], [0-9] e [_]
+
+4 - Aceita caracteres da tabela ASCII a partir de 128
+
+5 - Aceita caracteres acentuados como á, õ, ç
+
+6 - A linguagem é case sensitive em relação aos nomes
+
+7 - Nomes especiais como $this não podem ser usados
+
+Recomendações para das nomes
+
+1 - Tente das nomes claros e de fácil identificação
+
+2 - Evite nomes muito curtos ou muito longos
+
+3 - Defina um padrão e siga em todo o projeto
+
+4 - Para variáveis, dê preferência a letras minúsculas
+
+5 - Para constantes, dê preferência a letras maiúsculas
+
+6 - Use camelCase para métodos e atributos
+
+7 - Use SNAKE_CASE para nomear constantes
+
+$nomeCompletoCliente = "Camel Case";
+$telefone_contato_fornecedor = "Snake Case";
+
+Tipos primitivos escalares
+
+String - sequência de letras, números e símbolos, sempre representadas entre aspas.
+
+Int ou Integer - um valor numérico inteiro, aquele que vem sem a parte decimal.
+
+Float, Double ou Real - um valor numérico Real, que vem com a parte decimal, depois do ponto flutuante.
+
+Bool ou Boolean - um valor lógico ou Booleano, aque aceita apenas os valores verdadeiro ou falso (true ou false).
+
+10 Exemplos
+
+"RJ" - String    -19 - Int
+
+3.1415 - double   "false" - String
+
+17 - Int          0x1A - Int      
+
+true - Bollean    3e2 - double
+
+"" - String       "1024" - String
+
+// 0x = hexadecimal 0b = binário 0 = Octal
+
+seleciona (Ctrl +) ; - Transformar tudo em comentário e vírgula no vscode
+
+(Mostrar o tipo primitivo da variável)
+$v= 300;
+var_dump($v);
+
+(Coerção de potencia de float para int)
+$num = (integer) 3e2; // 3 x 10(2) coerção
+floor(9.12) (arredonda para baixo) resultado seria 9
+
+Validação entre valores
+
+O atributo do input step define o intervalo de passos ao clicar em botões giratórios para cima e para baixo, mover um 
+controle deslizante para a esquerda e para a direita em um intervalo e validar os diferentes tipos de data.
+
+por ex step 5, só permite valores multiplos de 5.
+
+(O print ou echo de variável booleana é 1 para e 0 ou vazio para false)
+
+$casado = true;
+print "O valor é $casado";
+
+Outras categorias de tipos primitivos.
+
+Compostos     Especiais
+
+array         null
+
+object        resource
+
+              callabe
+ 
+              mixed
+
+Quatro formatos de Strings
+
+double quoted
+
+single quoted
+
+Heredoc
+
+Nowdoc
+
+Strings em PHP
+
+double quoted - "Curso" (interpretação de conteúdo)
+
+single quoted - 'Curso' (sem interpretação de conteúdo)
+
+Operador de concatenação (.)
+
+"Curso" . "PHP"
+
+(constantes precisam ser concatenadas para interpretarem)
+const CANAL = "Curso em Video \u{1F499}";
+echo "Eu adoro o " .CANAL;
+
+(O mesmo vale para resultado de funções)
+
+echo "O ano atual é " . date('Y');
+
+(Sequência de escape)
+
+$nom = "Rodrigo";
+$snom = "Nogueira";
+
+echo "$nom\"Minotauro\" $snom";
+
+Para aspas dupla ""
+
+\n - Nova linha
+\t - Tabulação horizontal
+\\ - Barra invertida
+\$ - Sinal de cifrão
+\u{} - Codepoint Unicode
+
+Sintaxe Heredoc
+
+$curso = "PHP";
+$ano = date ('Y');
+
+echo <<< FRASE
+
+	Estou estudando
+		$curso em $ano
+	FRASE;
+
+Sintaxe Nowdoc
+
+$curso = "PHP";
+$ano = date ('Y');
+
+echo <<< 'FRASE'
+
+	Estou estudando
+		$curso em $ano
+	FRASE;
+
+(Pegando nome e sobrenome através do "name" do input.)
+$nome = $_GET["nome"];
+$sobrenome = $_GET["sobrenome"]; 
+echo "<p>É uma prazer te conhecer, $nome $sobrenome! Este é o meu site!"
+
+(Link para retornar a página anterior)
+<a href="javascript:history.go(-1)">Voltar para a página anterior</a>
+
+(coalescência nula)
+
+$nome = $_GET["nome"] ?? "sem nome"; (caso o nome não seja digitado)
+
+Operadores Aritméticos
+
++ - Adição
+- - Subtração
+* - Multiplicação
+/ - Divisão Real
+% - Resto da divisão
+** - Potenciação
+
+Expressões Aritméticas
+
+5 + 2 = 7     5 / 2 = 2.5
+
+5 - 2 = 3     5 % 2 = 1
+
+5 * 2 = 10    5 ** 2 = 25
+
+Ordem de precedência
+()
+**
+* / %
++ -
+
+Funções Matemáticas
+
+abs() (Valor absoluto)
+
+base_convert(254, 10, 8) (Conversões de base, 254 da base decimal para octal)
+
+ceil(), floor(), round() (arredondamento numérico)
+
+hypot() (tamanho da hipotenusa através de 2 catetos)
+
+intdiv() (Divisão inteira)
+
+min(), max() (Valores máximo e minimo de uma sequência)
+
+pi() (Valor de pi)
+
+pow() (Potenciação perdendo a ordem de precedencia)
+
+sin(), cos(), tan() (funções trigonométricas)
+
+sqrt() (Raiz quadrada)
+
+27 ** (1/3) (Raiz cubica de 27)
+
+Gerando números aleatórios
+
+rand(0,100) (Gerando números aleatórios entre 0 e 100, permitindo entre 100 e 0)
+
+mt_rand(0,100) (Gerando números aleatórios entre 0 e 100)
+
+Random_int(0,100)(Gera números aleatórios criptograficamente seguros  
+
+Recarregando página ao clicar
+<button onclick = "window.location.reload()">&#x2B05; Gerar outro</button>
+
+Usando number_format para formatar valores de moedas.
+echo "Seus R\$" .number_format($real,2 ,",",".")." equivalem a US\$" .number_format($dolar, 2,",",".");
+
+Formatação de moedas com internacionalização
+Biblioteca INTL (configurar php.ini para abilitar extenção INTL)
+$padrão = numfmt_create("pt_BR", NumberFormatter:: CURRENCY);
+echo "Seus " .numfmt_format_currency($padrão,$real, "BRL")." equivalem a " .numfmt_format_currency($padrão,$dolar,"BRL");;
+
+Consumir dados de uma api no site do banco central
+
+https://www.bcb.gov.br/acessoinformacao/dadosabertos 
+
+http://dadosabertos.bcb.gov.br/
+
+pegar os dados em URL formato json(Javascript Object notetion) 
+
+
+Superglobais do PHP
+
+$_GET (pega dados pela Url)
+
+$_POST (pega pelos pacote de cabeçalho ou formulário) 
+
+$_REQUEST (pega dados de ambos)
+
+$_COOKIE (Guarda conteúdos em uma variável no navegador)
+
+setcookie("dia-da-semana", "SEGUNDA", time() + 3600);( definindo 1h como 3600 segundos)
+
+$_FILES (Fazer upload de arquivos)
+
+$_SESSION (
+
+session_start();
+$_SESSION["teste"] = "FUNCIONOU";
+
+$_ENV
+
+$_SERVER
+
+$GLOBALS
+
+query string (é uma solicitação, a url com parâmetros preenchidos)
+
+(Criando formulário retroalimentados)
+<form action="<?php echo $_SERVER['PHP_SELF']?>" method="get">( <?php echo> ou <?=>)
+
+
