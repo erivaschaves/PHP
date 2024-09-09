@@ -13,7 +13,7 @@
             <?php
               // Pegando numero através do "name" do input.
               $real = 10000;
-              //Pegando data e hora atua do sistema 7 dias antes ccom date
+              //Pegando data e hora atua do sistema 7 dias antes com date
               $inicio = date("m-d-Y", strtotime("- 7 days"));
               $fim = date("m-d-Y");
               //Cotação vinda de uma API do Banco Central
