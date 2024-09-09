@@ -7,16 +7,7 @@
     <!--Carregando arquivo de estilo css-->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <?php
-        //Pegando valores dos inputs
-        $valor1 = $_GET['v1']?? '';
-        $peso1 = $_GET['p1']?? '';
-        $valor2 = $_GET['v2']?? '';
-        $peso2 = $_GET['p2']?? '';
-        $mediaA = ($valor1 + $valor2) / 2;
-        $mediaP = (($valor1*$peso1) + ($valor2 * $peso2)) / ($peso1 + $peso2);
-    ?>
+<body> 
     <main>
         <h1>Médias Aritméticas</h1>
         <!--Criando formulário e inputs-->
@@ -32,6 +23,15 @@
             <input type="submit" value="Calcular Médias">
         </form>
     </main>
+    <?php
+        //Pegando valores dos inputs
+        $valor1 = (int) $_GET['v1'] ?? 1;
+        $peso1 =  (int) $_GET['p1']?? 1;
+        $valor2 = (int) $_GET['v2'] ?? 1;
+        $peso2 = (int) $_GET['p2']?? 1;
+        $mediaA = (int) ($valor1 + $valor2) / 2;
+        $mediaP = (($valor1*$peso1) + ($valor2 * $peso2)) / ($peso1 + $peso2);
+    ?>
 
     <section>
         <!--Criando lista de médias-->
