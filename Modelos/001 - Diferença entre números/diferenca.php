@@ -11,8 +11,22 @@
 <p>
     <?php
         $n1 = $_GET["n1"] ?? "0"; // caso não haja numero.
-        $n2 = $_GET["n2"] ?? "0"; // caso não haja numero. 
-    
+        $n2 = $_GET["n2"] ?? "0"; // caso não haja numero.
+        //Caso n1 seja maior que n2. 
+        if ($n1>$n2){
+            $sub = $n1-$n2;
+            echo ` $n1 é maior que $n2, a diferença entre eles é: <strong>$sub</strong>`;
+        }else
+        //Caso n2 seja maior que n1. 
+        if ($n1<$n2){
+            $sub = $n2-$n1;               
+            echo `$n2 é maior que $n1, a diferença entre eles é:  <strong>$sub</strong>.`;
+        }
+        //Caso sejam iguais.
+        else{
+            $sub = $n1-$n2;
+            echo `Os Números são iguais, a diferença é: <strong>$sub</strong>.`;
+        }
     ?>
 </p>    
 <!--Link para retornar a página anterior-->
