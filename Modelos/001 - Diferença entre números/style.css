@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/*Configurações da tag body*/
+body {
+    display: flex; /*Tornando o container flexivel*/
+    flex-direction: column; /*Definindo a direção do itens do container*/
+    justify-content: center; /*Definindo espaços entre e ao redor dos itens ao centro*/
+    align-items: center; /*Alinhando itens ao centro*/
+    background-color:#5f2c82;/*Definindo cor de fundo*/
+    width: 100vw;/*Definindo largura*/
+    height: 100vh;/*Definindo altura*/
+    background-image: linear-gradient(to top, #49a09d, #5f2c82); /*gradiente linear ao fundo*/
+    font: normal 13pt Arial;/*Definindo a fonte*/
+    text-align: center;/*Alinhanto texto ao centro*/  
+}
+/*Configurações da tag main*/
+main {
+    display: flex;
+    flex-direction: column;
+    background: white; /*Definindo cor de fundo do elemento*/
+    width: 80vw;/*Definindo o elemento com 80% da Largura*/
+    max-width: 550px; /*Definindo a largura máxima do elemento*/
+    padding: 20px; /*Definindo distância dos elementos para borda*/
+    border-radius: 10px;/*Arredondando as bordas do elemento*/
+    align-items: center;/*Alinhando itens ao centro*/
+    box-shadow: 0px 0px 10px rgb(0, 0, 0.450);/*Criando sombreamento*/
+}
+
+/*Configurações da tag main ul*/
+main ul {
+    margin-top: 2px; /*Distância para margem superior*/
+    margin-bottom: 2px; /*Distância para margem inferior*/
+    text-align: left;
+}
+/*Configurações da tag input*/
+input{
+    font: normal 15pt Arial;
+    width: 100px;
+    border: 1px solid blue; /*Criando contorno de 1px*/
+    border-radius: 10px;/*Arredondando as bordas do elemento*/
+}
+/*Configurações da tag section*/
+section {
+    background: white; /*Definindo cor de fundo do elemento*/
+    border-radius: 10px; /*Arredondando as bordas do elemento*/
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502); /*Criando sombreamento*/
+}
+/*Configurações da tag section h2*/
+section h2 {
+    margin: 0 0 10px 0;
+}
+/*Configurações do botão subtrair*/  
+#subtrair {
+   padding: 5px;
+   background: blue;/*Definindo cor de fundo do botão*/
+   border: none;
+   color: white;
+   border-radius: 10px;/*Arredondando as bordas do elemento*/
+   cursor: pointer;/*Modifica o cursor do mouse para pointer*/
+}
