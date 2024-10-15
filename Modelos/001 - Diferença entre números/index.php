@@ -21,7 +21,7 @@
                     <input type="number" name="n1" id="n1" value="<?=$n1?>" required>
                     <input type="number" name="n2" id="n2" value="<?=$n2?>" required>
                     <p>
-                        <input type="submit" value="Subtrair">
+                        <input type="submit" value="Subtrair" id="subtrair">
                     </p>
             </form>
     <!--Lista de regras de execução do programa-->

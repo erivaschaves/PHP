@@ -52,7 +52,7 @@ section h2 {
     margin: 0 0 10px 0;
 }
 /*Configurações do botão subtrair*/  
-#subtrair {
+#calcular {
    padding: 5px;
    background: blue;/*Definindo cor de fundo do botão*/
    border: none;
