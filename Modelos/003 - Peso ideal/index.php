@@ -9,6 +9,7 @@
 <?php
     // Capturando os dados do Formulário Retroalimentado
     $alt = $_GET["alt"] ?? "0"; // caso não haja numero.
+    $sexo = $_GET["sexo"];
     
 ?>
 <main>
@@ -28,19 +29,20 @@
         </fieldset>
         <p>
             <input type="submit" value="Calcular" id="calcular">
-        </p>
-       
+        </p> 
     </form>
 </main>
 <!--Exibindo peso ideal-->
 <section>
     <h2>Resultado</h2>
     <?php    
-    // Validando a opção marcada e exbindo com 2 casas decimais com toFixed
-            if( window.document.getElementById('mas').checked) {
-                res.innerHTML = `Seu peso ideal é: ${((72.7 * alt) - 58).toFixed(2)} KG meu jovem.`;
+    // Validando a opção marcada
+            if($sexo == 'mas') {
+                $peso = 72.7 * $alt;
+                echo "Seu peso ideal é: $peso KG meu jovem.";
             }else{
-                res.innerHTML = `Seu peso ideal é: ${((62.1 * alt) - 44.7).toFixed(2)} KG minha jovem.`; 
+                $peso = 62.1 * $alt;
+                echo "Seu peso ideal é: $peso KG minha jovem."; 
             }
     ?>
 </section>
