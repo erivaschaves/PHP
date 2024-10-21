@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-    // Capturando os dados do Formulário Retroalimentado
+    // Capturando os dados do Formulário
     $n1 = $_GET["n1"] ?? "0"; // caso não haja numero.
     $n2 = $_GET["n2"] ?? "0"; // caso não haja numero.
     $n3 = $_GET["n3"] ?? "0"; // caso não haja numero.
@@ -17,20 +17,21 @@
 <main>
  <!--Título-->
     <h1>Operações numéricas</h1>
-    <!--Criando formulário retroalimentado-->
-    <form action="<?= $_SERVER['PHP_SELF']?>" method="get">
+    <!--Criando formulário-->
+    <form action="index.php" method="get">
         <label for="n1">Valor 1:</label>
-        <input type="number" name="n1" id="n1" value="<?=$n1?>" required>
+        <input type="number" name="n1" id="n1" placeholder="Valor 1" required>
         <p>
             <label for="n2">Valor 2:</label>
-            <input type="number" name="n2" id="n2" value="<?=$n2?>" required>
+            <input type="number" name="n2" id="n2" placeholder="Valor 2" required>
         </p>
         <p>
             <label for="n3">Valor 3:</label>
-            <input type="number" name="n3" id="n3" value="<?=$n3?>" required>
+            <input type="number" name="n3" id="n3" placeholder="Valor 3" required>
         </p>
         <p>
             <input type="submit" value="Calcular" id="calcular">
+            <input type="reset" value="Limpar" id="limpar">
         </p>
     </form>
     <!--Lista de regras de execução do programa-->

@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php
-    // Capturando os dados do Formulário Retroalimentado
+    // Capturando os dados do Formulário
     $alt = $_GET["alt"] ?? "0"; // caso não haja numero.
     $sexo = $_GET["sexo"];
     
@@ -16,9 +16,9 @@
     <!--Título-->
     <h1>Cálculo de Peso Ideal</h1>
     <!--Criando labels ,inputs e botões-->
-<form action="<?= $_SERVER['PHP_SELF']?>" method="get">
+<form action="index.php" method="get">
         <label for="alt">Altura:</label>
-        <input type="number" name="alt" id="alt" value="<?=$alt?>" required>
+        <input type="number" name="alt" id="alt" placeholder="Altura" step="0.01">
         <fieldset>
             <!--Deixando a opção masculino default-->
             <legend>Sexo</legend>
@@ -29,6 +29,7 @@
         </fieldset>
         <p>
             <input type="submit" value="Calcular" id="calcular">
+            <input type="reset" value="Limpar">
         </p> 
     </form>
 </main>
@@ -46,6 +47,13 @@
             }
     ?>
 </section>
+<script>
+    //Definindo função limpar
+    function limpar(){
+        var inputVal = window.document.querySelector('input[type=Number]');
+        inputVal.value = " ";
+    }
+</script>
     
 </body>
 </html>

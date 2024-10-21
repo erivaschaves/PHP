@@ -6,8 +6,8 @@ body {
     justify-content: center; /*Definindo espaços entre e ao redor dos itens ao centro*/
     align-items: center; /*Alinhando itens ao centro*/
     background-color:#5f2c82;/*Definindo cor de fundo*/
-    width: 100%;/*Definindo largura*/
-    height: 100%;/*Definindo altura*/
+    width: 100vw;/*Definindo largura*/
+    height: 100vh;/*Definindo altura*/
     background-image: linear-gradient(to top, #49a09d, #5f2c82); /*gradiente linear ao fundo*/
     font: normal 13pt Arial;/*Definindo a fonte*/
     text-align: center;/*Alinhanto texto ao centro*/  
@@ -52,7 +52,7 @@ section h2 {
     margin: 0 0 10px 0;
 }
 /*Configurações do botão subtrair*/  
-#subtrair {
+#subtrair, #limpar {
    padding: 5px;
    background: blue;/*Definindo cor de fundo do botão*/
    border: none;
