@@ -6,8 +6,8 @@ body {
     justify-content: center; /*Definindo espaços entre e ao redor dos itens ao centro*/
     align-items: center; /*Alinhando itens ao centro*/
     background-color:#5f2c82;/*Definindo cor de fundo*/
-    width: 100vw;/*Definindo largura*/
-    height: 100vh;/*Definindo altura*/
+    width: 100%;/*Definindo largura*/
+    height: 100%;/*Definindo altura*/
     background-image: linear-gradient(to top, #49a09d, #5f2c82); /*gradiente linear ao fundo*/
     font: normal 13pt Arial;/*Definindo a fonte*/
     text-align: center;/*Alinhanto texto ao centro*/  
@@ -52,12 +52,31 @@ section h2 {
     margin: 0 0 10px 0;
 }
 /*Configurações do botão subtrair*/  
-#calcular, #limpar {
+#validar, #limpar {
    padding: 5px;
    background: blue;/*Definindo cor de fundo do botão*/
    border: none;
    color: white;
    border-radius: 10px;/*Arredondando as bordas do elemento*/
    cursor: pointer;/*Modifica o cursor do mouse para pointer*/
+}
+
+/*Configurações da tag table*/
+table {
+    width: 500px;/*Largura da tabela*/
+    border-collapse: collapse;/*Bordas das celulas sem espaços*/
+    position: relative;
+}
+/*Configurações das tags td e th*/
+td, th {
+    border: 1px solid black;/*Criando contorno de 1px*/
+    padding: 5px;/*Definindo distância dos elementos para borda*/
+}
+/*Configurações da tag caption*/
+caption {
+    font-size: 1.5em;/*Defindo tamanho da fonte*/
+    font-weight: bold; /*Negrito*/
+    padding: 10px;
+    background-color: lightgray;/*Definindo cor de fundo*/
 }
 

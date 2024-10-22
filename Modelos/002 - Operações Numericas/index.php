@@ -41,6 +41,7 @@
         <li>Caso o valor 1 seja maior que 0 será impressa sua raiz quadrada, caso contrário seu quadrado.</li>
         <li>No valor 2, somente serão permitidos valores entre 10 e 100.</li>
         <li>Caso valor 3 seja menor que o valor 2, será exibida sua diferença, caso contrário será somado 1 ao valor 3.</li>
+        <li>Caso não seja digitado um número será considerado o valor 0.</li>
      </ul>    
 </main>
 
