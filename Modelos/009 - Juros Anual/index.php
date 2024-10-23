@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juros Anual</title>
+    <!--Carregando arquivo de estilo css-->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php
@@ -49,8 +51,10 @@
         <?php
                 $juros = (($taxa/100) + 1);
                 $acumulo = (($juros * $valor) * $anos);
+                //Formatação de moedas com internacionalização.
+                $padrão = numfmt_create("pt_BR", NumberFormatter:: CURRENCY);
                 // Exibindo o valor em Real.
-                echo "O Valor acumulado é: ${acumulo.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}."; 
+                echo "O Valor acumulado é: ".numfmt_format_currency($padrão,$acumulo, "BRL")."."; 
         ?>
     </section>
     
