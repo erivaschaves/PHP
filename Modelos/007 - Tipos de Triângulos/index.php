@@ -13,8 +13,7 @@
         $v1 = $_GET['v1'] ?? "0";
         $v2 = $_GET['v2'] ?? "0";
         $v3 = $_GET['v3'] ?? "0";
-        $img = 'Interrogação.png';
-        
+        $img = 'Interrogação.png';   
     ?>
     <main>
         <form action="index.php" method="get">
