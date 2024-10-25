@@ -37,7 +37,7 @@
                 <caption>Tabela com indices de poluição</caption>
                 <!--Cabeçalho da Tabela-->
                 <thead>
-                    <th scope="col">Índice</th>
+                    <th scope="col" style="width: 50px;">Índice</th>
                     <th scope="row" style="width: 50px;">Medida de segurança</th>
                 </thead>
                 <!--Corpo da Tabela-->

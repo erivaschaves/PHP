@@ -39,7 +39,7 @@
             <!--Cabeçalho da Tabela-->
             <thead>
                 <th scope="col" style="width: 30px;">Saldo</th>
-                <th scope="row" style="width: 50px;">Crédito</th>
+                <th scope="row" style="width: 30px;">Crédito</th>
             </thead>
             <!--Corpo da Tabela-->
             <tr>

@@ -36,7 +36,7 @@
             <caption>Tabela com categorias de natação</caption>
             <!--Cabeçalho da Tabela-->
             <thead>
-                <th scope="col">Idade</th>
+                <th scope="col" style="width: 30px;">Idade</th>
                 <th scope="row" style="width: 50px;">Categoria</th>
             </thead>
             <!--Corpo da Tabela-->
